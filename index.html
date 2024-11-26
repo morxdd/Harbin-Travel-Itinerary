@@ -1,212 +1,380 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <!-- 基本SEO meta tags -->
+    <meta name="description" content="精心規劃的11天東北冬季之旅，帶您體驗哈爾濱冰雪童話、長白山滑雪度假、上海魔都風情。含豪華住宿、特色美食、精選景點。">
+    <meta name="keywords" content="東北旅遊,哈爾濱,長白山,上海,冬季旅遊,滑雪,溫泉度假">
+    
+    <!-- Open Graph / Line / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/winter-northeast-tour">
+    <meta property="og:title" content="冬季東北絕美之旅：哈爾濱・長白山・上海11天精選行程">
+    <meta property="og:description" content="12月精選行程：哈爾濱冰雪童話🏰 長白山滑雪度假⛷️ 上海魔都風華🌃 一次體驗東北冬季最美風光！">
+    <meta property="og:image" content="https://example.com/tour-preview.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="冬季東北絕美之旅：哈爾濱・長白山・上海11天精選行程">
+    <meta name="twitter:description" content="12月精選行程：哈爾濱冰雪童話🏰 長白山滑雪度假⛷️ 上海魔都風華🌃 一次體驗東北冬季最美風光！">
+    <meta name="twitter:image" content="https://example.com/tour-preview.jpg">
+    
+    <!-- 其他額外資訊 -->
+    <meta name="author" content="旅行社名稱">
+    <meta name="copyright" content="旅行社版權所有">
+    <meta name="format-detection" content="telephone=no">
+    <title>冬季東北絕美之旅：哈爾濱・長白山・上海11天精選行程</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft JhengHei", sans-serif;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f5f5f5;
         }
+
         .header {
             text-align: center;
             padding: 40px 0;
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
-            border-radius: 10px;
             margin-bottom: 30px;
         }
-        .day-card {
-            background: white;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.2s;
-        }
-        .day-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        }
-        .day-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 10px;
-        }
-        .day-title {
-            font-size: 1.4em;
-            color: #1e3c72;
-            font-weight: bold;
-        }
-        .date {
-            color: #666;
-            font-size: 0.9em;
-        }
-        .location {
-            color: #2a5298;
-            font-weight: bold;
+
+        .header h1 {
+            font-size: 2.5em;
             margin-bottom: 10px;
         }
-        .activities {
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .day-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .day-card h2 {
+            color: #1e3c72;
+            border-bottom: 2px solid #1e3c72;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .day-card .schedule {
+            margin-bottom: 20px;
+        }
+
+        .day-card .schedule h3 {
+            color: #2a5298;
+            margin-bottom: 10px;
+        }
+
+        .day-card .schedule ul {
+            list-style-type: none;
             padding-left: 20px;
-            color: #444;
         }
-        .hotel {
-            margin-top: 15px;
-            padding: 10px;
+
+        .day-card .schedule li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .day-card .schedule li:before {
+            content: "•";
+            color: #1e3c72;
+            position: absolute;
+            left: -15px;
+        }
+
+        .day-card .story {
             background: #f8f9fa;
-            border-left: 4px solid #2a5298;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
         }
-        .transportation {
+
+        .day-card .story h3 {
+            color: #2a5298;
+            margin-bottom: 10px;
+        }
+
+        .hotel-info {
+            background: #e8f4f8;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .time-info {
             color: #666;
             font-style: italic;
         }
     </style>
 </head>
+
 <body>
     <div class="header">
-        <h1>冬季東北・魔幻雪境11天之旅</h1>
-        <h2>哈爾濱・長白山・上海精選行程</h2>
-        <p>2024年12月10日 - 12月20日</p>
+        <h1>冬季東北絕美之旅：哈爾濱・長白山・上海11天精選行程</h1>
+        <p>穿越冰雪童話，邂逅魔都風華</p>
     </div>
 
-    <div class="day-card">
-        <div class="day-header">
-            <div class="day-title">Day 1</div>
-            <div class="date">12月10日（二）</div>
+    <div class="container">
+        <div class="day-card">
+            <h2>第一天 (12/10 週二) - 踏上北國冰雪之旅</h2>
+            <div class="schedule">
+                <h3>今日行程</h3>
+                <ul>
+                    <li><span class="time-info">12:20</span> 從台北桃園國際機場起飛，展開冬季奇幻之旅</li>
+                    <li>經停上海浦東國際機場（停留1小時35分鐘）</li>
+                    <li><span class="time-info">19:05</span> 抵達哈爾濱太平國際機場</li>
+                    <li>夜遊聖索菲亞教堂，欣賞俄羅斯建築藝術的經典之作</li>
+                    <li>前往商圈採買禦寒衣物，為接下來的冰雪之旅做好準備</li>
+                </ul>
+            </div>
+            <div class="hotel-info">
+                入住：哈爾濱群力金江路亞朵酒店（享受現代舒適住宿環境）
+            </div>
+            <div class="story">
+                <h3>精彩描述</h3>
+                <p>夜幕低垂的哈爾濱城，聖索菲亞教堂在燈光映照下猶如一座璀璨的藝術殿堂。這座始建於1907年的拜占庭式建築，其金色穹頂在夜空中閃耀，彷彿為您的東北之旅點亮第一盞明燈。漫步教堂廣場，感受濃郁的異國情調，體驗這座中俄文化交融的冰城魅力。
+                </p>
+            </div>
         </div>
-        <div class="location">台北 → 哈爾濱</div>
-        <div class="transportation">✈️ 航班時間：12:20-19:05（上海浦東轉機 1小時35分）</div>
-        <ul class="activities">
-            <li>聖索菲亞教堂夜景遊覽</li>
-            <li>採買防寒衣物</li>
-        </ul>
-        <div class="hotel">🏨 住宿：哈爾濱群力金江路亞朵酒店</div>
-    </div>
 
-    <div class="day-card">
-        <div class="day-header">
-            <div class="day-title">Day 2</div>
-            <div class="date">12月11日（三）</div>
+        <div class="day-card">
+            <h2>第二天 (12/11 週三) - 哈爾濱城市風情探索</h2>
+            <div class="schedule">
+                <h3>今日行程</h3>
+                <ul>
+                    <li>清晨探訪大有坊早市，感受濃濃的市井生活氣息</li>
+                    <li>漫步中央大街，欣賞歐式建築群的藝術風采</li>
+                    <li>沿松花江畔漫步，遊覽百年鐵道大橋</li>
+                    <li>品味東北特色美食：
+                        <ul>
+                            <li>正宗鐵鍋燉大鵝，體驗東北傳統燉菜的精髓</li>
+                            <li>經典鍋包肉，感受酸甜交織的美味</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="hotel-info">
+                繼續入住：哈爾濱群力金江路亞朵酒店
+            </div>
+            <div class="story">
+                <h3>精彩描述</h3>
+                <p>晨光熹微中的大有坊早市熱鬧非凡，各式新鮮食材和當地特產琳瑯滿目，街邊飄來陣陣燒餅和豆漿的香氣。在中央大街上，77棟巴洛克式、折衷主義等不同風格的歷史建築，訴說著這座城市的百年滄桑。黃昏時分，佇立在松花江畔，欣賞鐵道大橋在夕陽映照下的壯麗剪影，感受這座城市獨特的歷史底蘊。
+                </p>
+            </div>
         </div>
-        <div class="location">哈爾濱市區觀光</div>
-        <ul class="activities">
-            <li>大有坊早市體驗</li>
-            <li>中央大街漫步</li>
-            <li>松花江風光</li>
-            <li>鐵道大橋觀光</li>
-            <li>特色美食：鐵鍋燉大鵝、鍋包肉</li>
-        </ul>
-        <div class="hotel">🏨 住宿：哈爾濱群力金江路亞朵酒店</div>
-    </div>
 
-    <div class="day-card">
-        <div class="day-header">
-            <div class="day-title">Day 3</div>
-            <div class="date">12月12日（四）</div>
+        <div class="day-card">
+            <h2>第三天 (12/12 週四) - 探訪東北虎的天地</h2>
+            <div class="schedule">
+                <h3>今日行程</h3>
+                <ul>
+                    <li>全天遊覽東北虎林園，近距離觀察這一珍稀物種</li>
+                    <li>了解東北虎的生活習性及保育工作</li>
+                    <li>觀看工作人員餵食及互動表演</li>
+                </ul>
+            </div>
+            <div class="hotel-info">
+                繼續入住：哈爾濱群力金江路亞朵酒店
+            </div>
+            <div class="story">
+                <h3>精彩描述</h3>
+                <p>東北虎林園是亞洲規模最大的東北虎自然保護區，占地約1,440公頃。在這片廣闊的園區內，百餘隻東北虎自由生活，漫步其中，近距離觀察這些山林之王的英姿，感受它們的威武與優雅。園區內不僅有東北虎，還有黑熊、梅花鹿等多種東北特有野生動物，讓您深入了解東北地區豐富的生態資源。
+                </p>
+            </div>
         </div>
-        <div class="location">哈爾濱</div>
-        <ul class="activities">
-            <li>東北虎林園一日遊</li>
-        </ul>
-        <div class="hotel">🏨 住宿：哈爾濱群力金江路亞朵酒店</div>
-    </div>
 
-    <div class="day-card">
-        <div class="day-header">
-            <div class="day-title">Day 4</div>
-            <div class="date">12月13日（五）</div>
+        <div class="day-card">
+            <h2>第四天 (12/13 週五) - 邁向長白山雪國</h2>
+            <div class="schedule">
+                <h3>今日行程</h3>
+                <ul>
+                    <li>搭乘動車：哈爾濱-敦化-長白山，穿越東北腹地</li>
+                    <li>抵達長白山度假區，辦理入住手續</li>
+                    <li>熟悉度假區環境，為明日滑雪活動做準備</li>
+                </ul>
+            </div>
+            <div class="hotel-info">
+                入住：長白山萬達錦華酒店（享受奢華溫泉度假體驗）
+            </div>
+            <div class="story">
+                <h3>精彩描述</h3>
+                <p>乘坐現代化動車穿越廣袤的東北平原，窗外的風景從城市逐漸過渡到被白雪覆蓋的原野。抵達長白山後，入住豪華的萬達錦華酒店，這裡不僅有一流的住宿環境，更有室內恆溫泳池和溫泉SPA，讓您在享受冰雪運動之餘，也能徹底放鬆身心。酒店的每一個細節都體現了國際級度假區的品質，為您的滑雪之旅奠定完美基礎。
+                </p>
+            </div>
         </div>
-        <div class="location">哈爾濱 → 長白山</div>
-        <div class="transportation">🚄 動車：哈爾濱-敦化-長白山</div>
-        <div class="hotel">🏨 住宿：長白山萬達錦華酒店</div>
-    </div>
 
-    <div class="day-card">
-        <div class="day-header">
-            <div class="day-title">Day 5-6</div>
-            <div class="date">12月14-15日（六-日）</div>
+        <div class="day-card">
+            <h2>第五天和第六天 (12/14-15) - 長白山滑雪之旅</h2>
+            <div class="schedule">
+                <h3>兩日滑雪行程</h3>
+                <ul>
+                    <li>在專業教練指導下學習滑雪技巧（適合初學者）</li>
+                    <li>體驗多種難度的滑雪道</li>
+                    <li>享受度假村完善的配套設施</li>
+                    <li>晚間可選擇泡湯放鬆或參與室內娛樂活動</li>
+                </ul>
+            </div>
+            <div class="hotel-info">
+                繼續入住：長白山萬達錦華酒店
+            </div>
+            <div class="story">
+                <h3>精彩描述</h3>
+                <p>長白山國際度假區擁有亞洲一流的滑雪設施，多條不同坡度的雪道可滿足各個級別滑雪愛好者的需求。在皚皚白雪中，感受馳騁雪道的暢快與自由。這裡的積雪期長達100天以上，雪質細膩綿密，非常適合滑雪運動。白天在雪場馳騁，夜晚泡在暖暖的溫泉中，欣賞窗外飄落的雪花，享受冬日度假的完美時光。度假區內的配套設施一應俱全，無論是餐飲、娛樂還是休閒項目，都能讓您的度假生活豐富多彩。
+                </p>
+            </div>
         </div>
-        <div class="location">長白山滑雪度假</div>
-        <ul class="activities">
-            <li>全日滑雪活動</li>
-            <li>度假村設施享受</li>
-        </ul>
-        <div class="hotel">🏨 住宿：長白山萬達錦華酒店</div>
-    </div>
 
-    <div class="day-card">
-        <div class="day-header">
-            <div class="day-title">Day 7</div>
-            <div class="date">12月16日（一）</div>
+        <div class="day-card">
+            <h2>第七天 (12/16 週一) - 告別冰雪、迎接魔都</h2>
+            <div class="schedule">
+                <h3>今日行程</h3>
+                <ul>
+                    <li>搭乘航班從長白山飛抵上海</li>
+                    <li>辦理酒店入住手續</li>
+                    <li>休息調整時差，為接下來的上海行程做準備</li>
+                </ul>
+            </div>
+            <div class="hotel-info">
+                入住：上海市區精選酒店（位置便利，盡享都市繁華）
+            </div>
+            <div class="story">
+                <h3>精彩描述</h3>
+                <p>從北國冰雪來到繁華魔都，感受溫度與氛圍的驟變。冬日的上海雖然沒有皚皚白雪，但現代都市的節奏與活力同樣令人期待。隨著飛機降落在浦東機場，一座國際化大都市的魅力正等待您去探索。</p>
+            </div>
         </div>
-        <div class="location">長白山 → 上海</div>
-        <div class="transportation">✈️ 航班：長白山-上海</div>
-    </div>
-
-    <div class="day-card">
-        <div class="day-header">
-            <div class="day-title">Day 8</div>
-            <div class="date">12月17日（二）</div>
+        
+        <div class="day-card">
+            <h2>第八天 (12/17 週二) - 領略上海精華景觀</h2>
+            <div class="schedule">
+                <h3>今日行程</h3>
+                <ul>
+                    <li>漫步南京路步行街，體驗商業文化繁華</li>
+                    <li>欣賞外灘經典建築群，感受百年租界風情</li>
+                    <li>登陸家嘴觀景台，俯瞰黃浦江兩岸</li>
+                    <li>搭乘遊船夜遊黃浦江，欣賞璀璨夜景</li>
+                </ul>
+            </div>
+            <div class="hotel-info">
+                繼續入住：上海市區精選酒店
+            </div>
+            <div class="story">
+                <h3>精彩描述</h3>
+                <p>南京路上車水馬龍，百年老店與現代商廈共存；外灘的歐式建築群沿江而立，見證滬上百年風雲；陸家嘴的摩天大樓直插雲霄，展現現代上海的雄心。夜幕降臨，搭乘遊船欣賞黃浦江兩岸燈火輝煌，盡情沉醉在東方巴黎的迷人夜色中。</p>
+            </div>
         </div>
-        <div class="location">上海市區觀光</div>
-        <ul class="activities">
-            <li>南京路步行街購物</li>
-            <li>外灘景觀</li>
-            <li>陸家嘴金融區</li>
-            <li>黃浦江夜景遊船</li>
-        </ul>
-    </div>
-
-    <div class="day-card">
-        <div class="day-header">
-            <div class="day-title">Day 9</div>
-            <div class="date">12月18日（三）</div>
+        
+        <div class="day-card">
+            <h2>第九天 (12/18 週三) - 探訪海派文化精髓</h2>
+            <div class="schedule">
+                <h3>今日行程</h3>
+                <ul>
+                    <li>遊覽豫園，欣賞江南園林藝術</li>
+                    <li>漫步城隍廟，體驗傳統市井文化</li>
+                    <li>參觀上海自然博物館，了解自然奧妙</li>
+                    <li>品嚐當地特色小吃，感受海派飲食文化</li>
+                </ul>
+            </div>
+            <div class="hotel-info">
+                繼續入住：上海市區精選酒店
+            </div>
+            <div class="story">
+                <h3>精彩描述</h3>
+                <p>豫園的亭台樓閣展現著江南園林的精巧，城隍廟的市井煙火道出老上海的風情。在充滿現代感的自然博物館裡，科技與自然完美融合。走在古今交錯的街頭，感受這座城市獨特的文化底蘊，品味傳統與現代的完美交融。</p>
+            </div>
         </div>
-        <div class="location">上海文化之旅</div>
-        <ul class="activities">
-            <li>豫園古蹟遊覽</li>
-            <li>城隍廟購物街</li>
-            <li>上海自然博物館</li>
-        </ul>
-    </div>
-
-    <div class="day-card">
-        <div class="day-header">
-            <div class="day-title">Day 10</div>
-            <div class="date">12月19日（四）</div>
+        
+        <div class="day-card">
+            <h2>第十天 (12/19 週四) - 體驗現代都市脈動</h2>
+            <div class="schedule">
+                <h3>今日行程</h3>
+                <ul>
+                    <li>在新世界大丸百貨盡情購物，體驗現代商業文明</li>
+                    <li>參觀上海港國際客運中心，感受國際航運樞紐的壯觀</li>
+                    <li>自由活動時間，完成最後採購</li>
+                    <li>整理行李，為明日返程做準備</li>
+                </ul>
+            </div>
+            <div class="hotel-info">
+                繼續入住：上海市區精選酒店
+            </div>
+            <div class="story">
+                <h3>精彩描述</h3>
+                <p>在充滿時尚氣息的新世界大丸百貨，感受上海作為國際化都市的購物天堂魅力。參觀上海港國際客運中心，親身體驗這座城市作為世界級港口的繁忙與活力。在行程接近尾聲之際，靜下心來回味這幾天在魔都的點點滴滴，為旅程留下完美回憶。</p>
+            </div>
         </div>
-        <div class="location">上海</div>
-        <ul class="activities">
-            <li>新世界大丸百貨購物</li>
-            <li>上海港國際客運中心觀光</li>
-        </ul>
-    </div>
-
-    <div class="day-card">
-        <div class="day-header">
-            <div class="day-title">Day 11</div>
-            <div class="date">12月20日（五）</div>
+        <div class="day-card">
+            <h2>第十一天 (12/20 週五) - 愉快返程</h2>
+            <div class="schedule">
+                <h3>今日行程</h3>
+                <ul>
+                    <li>搭乘磁浮列車前往浦東機場
+                        <ul>
+                            <li>體驗世界最快商業運營列車，最高時速430公里</li>
+                            <li>僅需8分鐘即可從龍陽路站抵達浦東機場</li>
+                        </ul>
+                    </li>
+                    <li>從上海浦東機場搭機返回桃園中正機場</li>
+                </ul>
+            </div>
+            <div class="story">
+                <h3>精彩描述</h3>
+                <p>告別魔都上海的最後一程，特別安排搭乘世界聞名的磁浮列車前往機場。磁浮列車是當代科技的傑出代表，其超高速運行體驗讓人印象深刻。穿梭在上海的天際線間，回想這11天的精彩旅程：從哈爾濱的冰雪童話、長白山的滑雪樂趣，到上海的繁華魅力，每一個畫面都值得永久珍藏。帶著滿滿的回憶和難忘的體驗，搭乘返程航班回到溫暖的家，為這趟跨越冰雪與繁華的精彩旅程畫下圓滿句點。
+                </p>
+            </div>
         </div>
-        <div class="location">上海 → 台北</div>
-        <div class="transportation">🚄 磁浮列車前往浦東機場</div>
-        <div class="transportation">✈️ 航班：上海浦東機場-桃園中正機場</div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add smooth scroll effect for better UX
             const cards = document.querySelectorAll('.day-card');
-            
             cards.forEach(card => {
-                card.addEventListener('mouseover', function() {
-                    this.style.cursor = 'pointer';
+                card.addEventListener('click', function () {
+                    this.style.transform = 'scale(1.01)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 200);
+                });
+            });
+
+            // Add hover effect
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function () {
+                    this.style.transition = 'all 0.3s ease';
+                    this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
+                });
+
+                card.addEventListener('mouseleave', function () {
+                    this.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
                 });
             });
         });
     </script>
 </body>
+
 </html>
