@@ -71,6 +71,12 @@
             padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .day-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
         }
 
         .day-card h2 {
@@ -78,6 +84,7 @@
             border-bottom: 2px solid #1e3c72;
             padding-bottom: 10px;
             margin-bottom: 15px;
+            font-size: 1.8em;
         }
 
         .day-card .schedule {
@@ -87,6 +94,7 @@
         .day-card .schedule h3 {
             color: #2a5298;
             margin-bottom: 10px;
+            font-size: 1.4em;
         }
 
         .day-card .schedule ul {
@@ -97,12 +105,27 @@
         .day-card .schedule li {
             margin-bottom: 8px;
             position: relative;
+            padding-left: 5px;
         }
 
         .day-card .schedule li:before {
             content: "•";
             color: #1e3c72;
             position: absolute;
+            left: -15px;
+        }
+
+        .day-card .schedule ul ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .day-card .schedule ul ul li {
+            margin-bottom: 4px;
+        }
+
+        .day-card .schedule ul ul li:before {
+            content: "◦";
             left: -15px;
         }
 
@@ -116,26 +139,75 @@
         .day-card .story h3 {
             color: #2a5298;
             margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+
+        .day-card .story p {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        .day-card .story p:last-child {
+            margin-bottom: 0;
         }
 
         .hotel-info {
             background: #e8f4f8;
-            padding: 10px;
+            padding: 15px;
             border-radius: 5px;
-            margin-top: 10px;
+            margin-top: 15px;
+            color: #2a5298;
+        }
+
+        .hotel-info ul {
+            list-style-type: none;
+            margin-top: 8px;
+            padding-left: 20px;
+        }
+
+        .hotel-info ul li {
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 5px;
+        }
+
+        .hotel-info ul li:before {
+            content: "•";
+            color: #1e3c72;
+            position: absolute;
+            left: -15px;
         }
 
         .price-info {
             background: #f8e8e8;
-            padding: 10px;
+            padding: 15px;
             border-radius: 5px;
-            margin-top: 10px;
+            margin-top: 15px;
             color: #d44;
         }
 
         .time-info {
             color: #666;
             font-style: italic;
+            margin-right: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .day-card {
+                padding: 15px;
+            }
+
+            .day-card h2 {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
@@ -335,25 +407,57 @@
         </div>
 
         <div class="day-card">
-            <h2>第九天 (12/17 週二) - 水鄉風情</h2>
+            <h2>第九天 (12/17 週二) - 烏鎮水鄉之美</h2>
             <div class="schedule">
                 <h3>今日行程</h3>
                 <ul>
-                    <li>全天遊覽烏鎮古鎮：
+                    <li>早餐後搭車前往烏鎮（車程約1.5小時）</li>
+                    <li>遊覽烏鎮東柵景區：
                         <ul>
-                            <li>體驗江南水鄉風情</li>
-                            <li>參觀古老建築與博物館</li>
-                            <li>品嚐地道江南美食</li>
+                            <li>漫步江南百年老街，欣賞水鄉建築之美</li>
+                            <li>參觀江南木雕館，了解傳統工藝</li>
+                            <li>遊覽百年釀酒坊，品嚐黃酒文化</li>
+                            <li>走訪藍印花布作坊，感受非遺魅力</li>
+                        </ul>
+                    </li>
+                    <li>午餐品嚐地道水鄉美食：
+                        <ul>
+                            <li>烏鎮特色臭豆腐</li>
+                            <li>傳統糯米排骨</li>
+                            <li>姑嫂餅</li>
+                            <li>本地特色河鮮</li>
+                        </ul>
+                    </li>
+                    <li>下午探索西柵景區：
+                        <ul>
+                            <li>搭乘烏篷船，遊覽水鄉河道</li>
+                            <li>參觀百年郵局、江南茶館</li>
+                            <li>走訪絲綢工坊，了解絲綢文化</li>
+                            <li>體驗傳統手工制紙工藝</li>
+                        </ul>
+                    </li>
+                    <li>傍晚至夜間活動：
+                        <ul>
+                            <li>欣賞江南婚嫁表演</li>
+                            <li>觀看水鄉實景演出《烏鎮往事》</li>
+                            <li>漫步夜色中的燈火古鎮</li>
                         </ul>
                     </li>
                 </ul>
             </div>
             <div class="hotel-info">
                 入住：烏鎮民宿臨水三人房
+                <ul>
+                    <li>百年老宅改建的精品民宿</li>
+                    <li>臨水而建，可欣賞河景</li>
+                    <li>保留傳統建築特色，配備現代化設施</li>
+                </ul>
             </div>
             <div class="story">
                 <h3>精彩描述</h3>
-                <p>烏鎮是江南六大古鎮之一，千年古鎮的深厚文化底蘊與現代文創的巧妙結合，讓這裡成為體驗江南水鄉最佳的文化景點之一。</p>
+                <p>　　烏鎮，是一座擁有1300年歷史的江南古鎮，黑瓦白牆的明清建築與縱橫的水道構成了經典的江南水鄉畫卷。東柵景區內，活態展示的江南傳統工藝 - 木雕、藍印花布、手工宣紙，讓遊客親身體驗非遺文化的魅力。</p>
+                
+                <p>　　傍晚時分，古鎮華燈初上，河道上的烏篷船載著遊客穿梭於橋港之間。臨水而居的百年老宅民宿，讓遊客能夠真實感受水鄉的寧靜與古樸。《烏鎮往事》實景演出將水鄉的人文故事娓娓道來，為這座千年古鎮增添了幾分動人的韻味。</p>
             </div>
         </div>
 
